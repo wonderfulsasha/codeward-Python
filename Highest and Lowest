@@ -1,0 +1,14 @@
+#In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+def high_and_low(numbers):
+    list = numbers.split(' ')
+    list.sort(reverse = True)
+    high = int(list[0])
+    low = int(list[0])
+    for number in list:
+        number = int(number) 
+        if number > high:
+            high = number
+        elif number < low:
+            low = number
+    return str(high) + ' ' + str(low)
